@@ -1,67 +1,90 @@
-# Bootcamp Helper (MV3)
+# 🗂️ Organizador de Tarefas (Chrome Extension - MV3)
 
-Extensão de exemplo para Google Chrome (Manifest V3) usada no Bootcamp II.
+Extensão para Google Chrome que permite criar, marcar e remover tarefas diretamente do navegador. Desenvolvida com Manifest V3.
+
+---
 
 ## ✨ Funcionalidades
-- Popup com UI simples (HTML/CSS/JS).
-- Service worker em background respondendo a mensagens (PING).
-- Content script (opcional) que destaca links em páginas específicas.
-- Página de opções para ajustar cor e ativar/desativar o destaque.
-- Permissão mínima: `storage`.
 
-## 🗂 Estrutura
+- ✅ Adicione, marque como concluída e exclua tarefas.
+- 🔄 Armazenamento local com persistência entre sessões.
+- ⚙️ Página de opções para:
+  - Limpar todas as tarefas salvas.
+  - Personalizar cor do destaque (opcional).
+- 🧠 Interface simples e responsiva.
+- 🛠️ Desenvolvida com HTML, CSS, JavaScript e Chrome APIs.
+
+---
+
+## 📦 Estrutura do Projeto
 ```
 src/
-  popup/
-    popup.html
-    popup.js
-    popup.css
-  content/
-    content.js
-  background/
-    service-worker.js
-  options/
-    options.html
-    options.js
-  assets/
-    logo.svg
-  styles/
-    global.css
+popup/
+popup.html
+popup.js
+popup.css
+options/
+options.html
+options.js
+background/
+service-worker.js
+assets/
+logo.png
+styles/
+global.css
+
 icons/
-  icon16.png
-  icon32.png
-  icon48.png
-  icon128.png
+icon16.png
+icon32.png
+icon48.png
+icon128.png
+
 docs/
   index.html         ← GitHub Pages (Settings → Pages → /docs)
+
 manifest.json
 README.md
 LICENSE
 ```
 
-## 🔧 Instalação local (modo desenvolvedor)
-1. Abra `chrome://extensions` e ative **Developer mode**.
-2. Clique em **Load unpacked** e selecione a pasta do projeto.
-3. Clique no ícone da extensão para abrir o popup.
-4. Acesse `https://developer.chrome.com/` para ver os links destacados pelo content script.
 
-## 🔐 Permissões
-- `storage` — salvar preferências no `chrome.storage.sync`.
+---
 
-> **Princípio do menor privilégio:** sem `tabs` e sem `host_permissions` amplas. O `content_script` é limitado a `https://developer.chrome.com/*`.
+## 🧪 Como instalar no Chrome (modo desenvolvedor)
 
-## 🌐 GitHub Pages
-- (Opção A recomendada) Em **Settings → Pages**, selecione **Branch: main** e **Folder: /docs**.
-- A página será publicada em `https://<usuario>.github.io/<repo>/`.
+1. Acesse `chrome://extensions`
+2. Ative o **Modo do desenvolvedor** (Developer Mode).
+3. Clique em **"Carregar sem compactação"** (Load unpacked).
+4. Selecione a pasta raiz do projeto (onde está o `manifest.json`).
+5. A extensão aparecerá na barra de ferramentas.
 
-## 📦 Empacotar (.zip) para distribuição
-1. Comprima a pasta do projeto (sem `node_modules`).
-2. No GitHub, crie uma **Release** e envie o `.zip`.
-3. Adicione o link de download no `README.md` e/ou no `docs/index.html`.
+---
 
-## 🧪 Testes rápidos
-- Verifique o console do popup e do `service-worker` (DevTools) para logs.
-- Troque a cor/ativação nas **Opções** e recarregue a página alvo.
+## ⚙️ Permissões utilizadas
+
+- `storage` — Salvar tarefas e configurações localmente.
+- `host_permissions` — (opcional) Apenas necessário se o content script for usado.
+
+---
+
+## 🚀 Como usar
+
+- Clique no ícone da extensão para abrir o popup.
+- Digite uma tarefa e clique em **"Adicionar"**.
+- Marque tarefas como concluídas ou clique em ❌ para removê-las.
+- Vá em **⚙️ Opções** para:
+  - Personalizar a cor do destaque.
+  - Ativar/desativar o destaque.
+  - Limpar todas as tarefas.
+
+---
+
+## 🧼 Limpar tudo
+
+Na tela de opções, clique em **"🧹 Limpar todas as tarefas"** para apagar tudo o que foi salvo.
+
+---
 
 ## 🪪 Licença
-[MIT](LICENSE)
+
+MIT © [Gustavo Barbosa Oliveira]
