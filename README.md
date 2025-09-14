@@ -12,7 +12,7 @@ diretamente no navegador.
 ## 📦 Instalação
 1. Baixe ou clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/organizador-tarefas
+   git clone https://github.com/gustavob63/organizador-de-tarefas.git
 
 2. Abra o Google Chrome e vá até chrome://extensions/.
 
