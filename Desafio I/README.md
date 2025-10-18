@@ -28,11 +28,11 @@ diretamente no navegador.
  
 Ícone da extensão
 
-![ícone da extensão](image.png)
+![ícone da extensão](img/print-logo.png)
 
 Popup de tarefas
 
-![popup da extensão](image-1.png)
+![popup da extensão](img/print-extensao.png)
 
 ## 🛠️ Tecnologias utilizadas
 

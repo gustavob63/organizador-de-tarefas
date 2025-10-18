@@ -1,0 +1,10 @@
+services:
+  tests:
+    build: .
+    image: bootcamp/ext-e2e:latest
+    container_name: ext-e2e-tests
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: npx playwright test --reporter=list,html
+
